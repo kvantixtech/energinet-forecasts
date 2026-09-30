@@ -1,6 +1,6 @@
 # Changelog
 
-`METHOD.md` was committed before any data was downloaded (commit `6b62c8f`). Entries below record how the rules were applied where the method did not say. Each is committed before the scoring it affects is run.
+`METHOD.md` was committed before any data was downloaded (commit `6b62c8f`). Entries below record how the rules were applied where the method did not say, or where the data showed that a rule could not be applied as written. Each is committed before the scoring it affects is run.
 
 ## 2026-09-30: how the rules are applied (before the first scoring run)
 
