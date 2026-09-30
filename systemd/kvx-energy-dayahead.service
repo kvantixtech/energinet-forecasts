@@ -1,0 +1,22 @@
+[Unit]
+Description=Kvantix energy test: save the wind and solar forecasts for tomorrow
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=kvxenergy
+Group=kvxenergy
+Environment=KVX_ENERGY_CONFIG=/etc/kvx-energy/config.json
+ExecStart=/usr/bin/python3 /opt/kvantix/energy/kvx_energy.py dayahead
+
+Nice=10
+TimeoutStartSec=20min
+MemoryMax=256M
+ProtectSystem=strict
+ReadWritePaths=/var/lib/kvx-energy
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+NoNewPrivileges=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX

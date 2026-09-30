@@ -1,0 +1,5 @@
+# Published versions of the energy collector (kvx_energy.py, part B, see METHOD-CO2.md).
+# <VERSION>  <sha256 of kvx_energy.py>  <first published, UTC>
+# CI fails if kvx_energy.py changes without a new line here, and the daily anchors
+# record which of these hashes the server was running.
+1.0  a9a204779789770b0eb2fb72b1735ca108d716735347a408f277262f897227cf  2026-09-30T05:11:44Z

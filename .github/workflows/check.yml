@@ -13,6 +13,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Time rules and metrics
         run: python3 tests/test_score.py
+      - name: Collector (offline, with saved responses)
+        run: python3 tests/test_collector.py
+      - name: Anchors and METHOD.lock
+        run: python3 tools/anchor.py lint --anchors anchors/chain-heads.csv
       - name: Data files match the manifest
         run: |
           [ -f data/manifest.json ] || { echo "no data yet"; exit 0; }

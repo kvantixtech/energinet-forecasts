@@ -1,0 +1,9 @@
+[Unit]
+Description=Kvantix energy test: save CO2 actuals and stored wind/solar forecasts, verify the chain (daily 03:37 UTC)
+
+[Timer]
+OnCalendar=*-*-* 03:37:00 UTC
+Persistent=true
+
+[Install]
+WantedBy=timers.target

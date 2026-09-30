@@ -1,0 +1,9 @@
+[Unit]
+Description=Kvantix energy test: save the wind and solar forecasts for tomorrow (daily 17:30 UTC)
+
+[Timer]
+OnCalendar=*-*-* 17:30:00 UTC
+Persistent=true
+
+[Install]
+WantedBy=timers.target
