@@ -40,7 +40,7 @@ Source: Energinet (www.energidataservice.dk), CC BY 4.0. Kvantix is not affiliat
 
 This is the question a household actually asks.
 
-1. For each Danish calendar day, take the snapshot saved at 17:30 UTC the day before.
+1. For each Danish calendar day, take the CO₂ snapshot saved at 17:07 UTC the day before. The CO₂ forecast for the next day only appears once the next day's power market has been settled, around midday. A snapshot in the morning reaches only to the end of the same day. If the 17:07 snapshot does not cover all 24 hours of the next day, that day is not scored, and the number of such days is reported.
 2. Find the **greenest 3-hour window** in the forecast: the three consecutive whole hours with the lowest forecast average.
 3. Measure what actually happened in that window, and compare it with:
    - the actual greenest 3-hour window that day
