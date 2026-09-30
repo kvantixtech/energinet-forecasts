@@ -1,0 +1,91 @@
+{
+ "downloaded_at_utc": "2026-09-30T04:28:47Z",
+ "period": {
+  "first_hour_utc": "2019-11-01T00:00",
+  "last_hour_utc": "2026-06-30T23:00",
+  "rule": "METHOD.md: up to the end of the last calendar month that ended at least three months before the download"
+ },
+ "source": "Energinet (www.energidataservice.dk), CC BY 4.0",
+ "datasets": {
+  "forecasts": "https://api.energidataservice.dk/dataset/Forecasts_Hour",
+  "outcomes": "https://api.energidataservice.dk/dataset/ProductionConsumptionSettlement"
+ },
+ "query": "month by month with one day of margin on each side, limit=0; rows keyed by HourUTC, de-duplicated, and rows outside the period dropped",
+ "settlement_columns": [
+  "OffshoreWindGe100MW_MWh",
+  "OffshoreWindLt100MW_MWh",
+  "OnshoreWindGe50kW_MWh",
+  "OnshoreWindLt50kW_MWh",
+  "SolarPowerGe10Lt40kW_MWh",
+  "SolarPowerGe40kW_MWh",
+  "SolarPowerLt10kW_MWh",
+  "SolarPowerSelfConMWh"
+ ],
+ "api_calls": 160,
+ "files": {
+  "forecasts_2019.csv.gz": {
+   "rows": 8722,
+   "sha256": "021bab42d9dffd5ec1a6eb990fdcc335aad6c332c6d487b1cf868c5919ac7096"
+  },
+  "settlement_2019.csv.gz": {
+   "rows": 2928,
+   "sha256": "ede0a4ac4f3230ff357f16874fec35ce9f4af82ad629a7875e1762515744e47a"
+  },
+  "forecasts_2020.csv.gz": {
+   "rows": 52560,
+   "sha256": "830cd2c5e2dbb5db5ed957787c3351be5b0e18ef7f87360eb1f68b7ffef873bb"
+  },
+  "settlement_2020.csv.gz": {
+   "rows": 17568,
+   "sha256": "20ccb8f4c2a845ea0357c85ad9d7d77522157e86d0608f24a236c4c9292926e0"
+  },
+  "forecasts_2021.csv.gz": {
+   "rows": 52542,
+   "sha256": "746d6b2bde869126148bcd73331083011b210ee3a979a28bbbb59ddcaeeee9e5"
+  },
+  "settlement_2021.csv.gz": {
+   "rows": 17520,
+   "sha256": "5a983212b1ac11e79bbecf3ebaa5f71bb8e8411cd5edd3bf14377331df7f901c"
+  },
+  "forecasts_2022.csv.gz": {
+   "rows": 52560,
+   "sha256": "4263138058c4ef93ac8324bae9f9da03af3cd28825b8c77864a4d52364705462"
+  },
+  "settlement_2022.csv.gz": {
+   "rows": 17520,
+   "sha256": "668fad9b1f7af4b48bc2778781db37c327f756e05f463b19ea9b360ae73ee8c3"
+  },
+  "forecasts_2023.csv.gz": {
+   "rows": 52560,
+   "sha256": "cdabd7a1078fd08335926d0318f89ea6d8fdff345096b3a265ff498513489c03"
+  },
+  "settlement_2023.csv.gz": {
+   "rows": 17520,
+   "sha256": "7f608b57bbb5e08cfb49af419f54d1ce089007612ad04fd6bcf9838b9df2e1af"
+  },
+  "forecasts_2024.csv.gz": {
+   "rows": 52380,
+   "sha256": "b895823e082e9ad8404c1b25e1aabf4d2477dafaeb34d10ec79d682bb0806ae6"
+  },
+  "settlement_2024.csv.gz": {
+   "rows": 17568,
+   "sha256": "535d01f0ecbbdf85e08bf1b1f5eca16f8153908012306b82128c9e70493010b0"
+  },
+  "forecasts_2025.csv.gz": {
+   "rows": 51992,
+   "sha256": "667e16febac3faa6ad081706db96c0c3840f7140a2d4cf8d57e63566b14c3056"
+  },
+  "settlement_2025.csv.gz": {
+   "rows": 17520,
+   "sha256": "91edbe1f5fe323352c4541a6eccc72ae38021275bdb909ef12276adf50414c43"
+  },
+  "forecasts_2026.csv.gz": {
+   "rows": 26047,
+   "sha256": "472641ae66c25cfa40678196f26898a94e9d3ac7aeff48731235335e34ab1779"
+  },
+  "settlement_2026.csv.gz": {
+   "rows": 8688,
+   "sha256": "e6e1ea2bcd95ffa243dacf8a3b714d93d277b52e244ef380fc76e7995bb09081"
+  }
+ }
+}
