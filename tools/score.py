@@ -150,7 +150,8 @@ def main():
                             rows.append({"area": area, "type": short, "horizon": label, "hours_set": hourset,
                                          "split": split, "split_key": key, **m})
     os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
-    fields = sorted({k for r in rows for k in r}, key=lambda k: (["area", "type", "horizon", "hours_set", "split", "split_key"] + [k]).index(k))
+    head = ["area", "type", "horizon", "hours_set", "split", "split_key"]
+    fields = head + sorted({k for r in rows for k in r} - set(head))  # fixed order: no dependence on hash seeds
     with open(os.path.join(ROOT, "results", "scores.csv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)
         w.writeheader()
