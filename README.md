@@ -10,7 +10,7 @@ Part of the Kvantix [Data Playground](https://kvantix.tech/playground/). Same me
 
 ## Part B: does the green hour hold?
 
-Energinet's CO₂ forecast is overwritten as it is updated, so it can only be scored if someone saves it at the time. From October 2026 the collector [`kvx_energy.py`](kvx_energy.py) saves it every hour. It also saves the wind and solar forecasts every evening, which checks part A's one blind spot: whether stored forecasts are ever changed afterwards. Every download is hash-chained, and the chain head is published daily in [`anchors/`](anchors/). The rules are in [`METHOD-CO2.md`](METHOD-CO2.md), fixed before the first snapshot. The collector's SHA-256 is in [`METHOD.lock`](METHOD.lock).
+Energinet's CO₂ forecast is overwritten as it is updated, so it can only be scored if someone saves it at the time. From October 2026 the collector [`kvx_energy.py`](kvx_energy.py) saves it every hour. It also saves the wind and solar forecasts every evening, which checks part A's one blind spot: whether stored forecasts are ever changed afterwards. Every download is hash-chained, and the chain head is published daily in [`anchors/`](anchors/). The rules are in [`METHOD-CO2.md`](METHOD-CO2.md), fixed before the first snapshot. The collector's SHA-256 is in [`METHOD.lock`](METHOD.lock). Live status of the collector: [kvantix.tech/playground/energy](https://kvantix.tech/playground/energy/).
 
 ## Data and licence
 
