@@ -12,9 +12,11 @@ assert S.issue_time("ForecastDayAhead", h("2026-07-02 10")) == h("2026-07-01 16"
 assert S.issue_time("ForecastDayAhead", h("2026-01-02 10")) == h("2026-01-01 17")
 # 22:00 UTC on 1 July is already 2 July in Denmark, so it belongs to the forecast issued on 1 July
 assert S.issue_time("ForecastDayAhead", h("2026-07-01 22")) == h("2026-07-01 16")
-# Intraday: 06:00 Danish time the same day; hours before it are not scored
-assert S.issue_time("ForecastIntraday", h("2026-07-02 10")) == h("2026-07-02 04")
-assert not S.scored("ForecastIntraday", h("2026-07-02 03")) and S.scored("ForecastIntraday", h("2026-07-02 04"))
+# Intraday (CHANGELOG #1): treated as issued at 08:00 Danish time; scored from the 09:00 hour
+assert S.issue_time("ForecastIntraday", h("2026-07-02 10")) == h("2026-07-02 06")   # summer: 08:00 DK = 06 UTC
+assert S.issue_time("ForecastIntraday", h("2026-01-02 10")) == h("2026-01-02 07")   # winter: 08:00 DK = 07 UTC
+assert not S.scored("ForecastIntraday", h("2026-07-02 06")) and S.scored("ForecastIntraday", h("2026-07-02 07"))
+assert not S.scored("ForecastIntraday", h("2026-01-02 07")) and S.scored("ForecastIntraday", h("2026-01-02 08"))
 assert S.scored("ForecastDayAhead", h("2026-07-02 00"))
 # 5 hours / 1 hour before
 assert S.issue_time("Forecast5Hour", h("2026-07-02 10")) == h("2026-07-02 05")

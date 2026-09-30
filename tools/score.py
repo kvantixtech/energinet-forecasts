@@ -44,8 +44,9 @@ def issue_time(col, hour):
         d = hour.astimezone(DK).date() - timedelta(days=1)
         return datetime(d.year, d.month, d.day, 18, tzinfo=DK).astimezone(UTC)
     if col == "ForecastIntraday":
+        # CHANGELOG.md 2026-09-30 #1: treated as issued at 08:00 Danish time (not 06:00, as described)
         d = hour.astimezone(DK).date()
-        return datetime(d.year, d.month, d.day, 6, tzinfo=DK).astimezone(UTC)
+        return datetime(d.year, d.month, d.day, 8, tzinfo=DK).astimezone(UTC)
     if col == "Forecast5Hour":
         return hour - timedelta(hours=5)
     if col == "Forecast1Hour":
@@ -80,8 +81,10 @@ def baselines(outc, col, hour):
 
 
 def scored(col, hour):
-    """CHANGELOG.md: intraday is scored only for hours starting at or after its issue time (06:00 Danish time)."""
-    return hour >= issue_time(col, hour)
+    """CHANGELOG.md 2026-09-30 #1: intraday is scored only for hours starting at 09:00 Danish time or later."""
+    if col == "ForecastIntraday":
+        return hour >= issue_time(col, hour) + timedelta(hours=1)
+    return True
 
 
 def metrics(points):
