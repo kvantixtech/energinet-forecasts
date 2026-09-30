@@ -1,0 +1,30 @@
+name: check
+
+# Tests of the time rules, and: are the published results exactly what tools/score.py produces
+# from the committed data?
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Time rules and metrics
+        run: python3 tests/test_score.py
+      - name: Data files match the manifest
+        run: |
+          [ -f data/manifest.json ] || { echo "no data yet"; exit 0; }
+          python3 -c "
+          import hashlib, json
+          m = json.load(open('data/manifest.json'))
+          for f, v in m['files'].items():
+              got = hashlib.sha256(open('data/raw/' + f, 'rb').read()).hexdigest()
+              assert got == v['sha256'], f
+          print('all', len(m['files']), 'files match')"
+      - name: Results are up to date
+        run: |
+          [ -f data/manifest.json ] || exit 0
+          [ -d results ] || exit 0
+          python3 tools/score.py && git diff --exit-code results/
