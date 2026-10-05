@@ -2,7 +2,8 @@
 """Scores Energinet's wind and solar forecasts as described in METHOD.md (and CHANGELOG.md).
 
   python3 tools/score.py     reads data/raw/*.csv.gz, writes results/scores.csv, results/summary.md
-                             and results/results.json
+                             and results/results.json, and the same three files for each variant
+                             in VARIANTS under results/<variant>/ (CHANGELOG.md #7)
 
 Standard library only (zoneinfo needs the system time zone database, present on GitHub runners).
 Deterministic: same inputs, same bytes out.
@@ -19,6 +20,10 @@ AREAS = ["DK1", "DK2"]
 TYPES = [("Offshore Wind", "offshore", "OffshoreWind"), ("Onshore Wind", "onshore", "OnshoreWind"), ("Solar", "solar", "SolarPower")]
 HORIZONS = [("ForecastDayAhead", "day-ahead"), ("ForecastIntraday", "intraday"), ("Forecast5Hour", "5 hours"), ("Forecast1Hour", "1 hour")]
 BASELINES = [("persistence", "like right now"), ("recent", "like recently (28-day average for the hour)")]
+# CHANGELOG.md 2026-10-05 #7: offshore wind also scored against parks of 100 MW and more, in its own folder.
+# (forecast type, short name, outcome column prefix, folder under results/, title)
+VARIANTS = [("Offshore Wind", "offshore", "OffshoreWindGe100MW", "offshore-ge100mw",
+             "Offshore wind against parks of 100 MW and more (CHANGELOG.md #7)")]
 MIN_RECENT = 20  # CHANGELOG.md: the 28-day average needs at least 20 of the 28 values
 
 
@@ -55,14 +60,15 @@ def issue_time(col, hour):
 
 
 def load():
-    out = {}  # (area, type) -> {hour: outcome}
+    out = {}  # (area, outcome column prefix) -> {hour: outcome}
+    prefixes = [t[2] for t in TYPES] + [v[2] for v in VARIANTS]
     for r in read("settlement_*.csv.gz"):
         h = ts(r["HourUTC"])
-        for tname, short, prefix in TYPES:
+        for prefix in prefixes:
             vals = [num(v) for k, v in r.items() if k.startswith(prefix)]
             vals = [v for v in vals if v is not None]
             if vals:
-                out.setdefault((r["PriceArea"], tname), {})[h] = sum(vals)
+                out.setdefault((r["PriceArea"], prefix), {})[h] = sum(vals)
     fc = {}  # (area, type) -> {hour: {col: value}}
     for r in read("forecasts_*.csv.gz"):
         fc.setdefault((r["PriceArea"], r["ForecastType"]), {})[ts(r["HourUTC"])] = {c: num(r[c]) for c, _ in HORIZONS}
@@ -109,71 +115,102 @@ def metrics(points):
     return m
 
 
-def main():
-    outcomes, forecasts = load()
+def score_series(outc, fcs, area, short):
+    """Scores of one series: rows (every horizon, hour set and split) and missing-value counts."""
     rows, missing = [], []
-    for area in AREAS:
-        for tname, short, _ in TYPES:
-            outc, fcs = outcomes.get((area, tname), {}), forecasts.get((area, tname), {})
-            hours = sorted(set(outc) & set(fcs))
-            per = {c: [] for c, _ in HORIZONS}  # (hour, forecast, outcome, baselines)
-            for h in hours:
-                o = outc[h]
-                for c, _ in HORIZONS:
-                    f = fcs[h][c]
-                    if f is None or not scored(c, h):
-                        continue
-                    if short == "solar" and f == 0 and o == 0:
-                        continue
-                    per[c].append((h, f, o, baselines(outc, c, h)))
-            for c, label in HORIZONS:
-                n_missing = sum(1 for h in hours if fcs[h][c] is None and scored(c, h))
-                missing.append({"area": area, "type": short, "horizon": label, "hours_missing": n_missing})
-            # common hours: all four forecasts and the outcome exist (solar: not all zero)
-            common = set(h for h, *_ in per[HORIZONS[0][0]])
-            for c, _ in HORIZONS[1:]:
-                common &= set(h for h, *_ in per[c])
-            if short == "solar":
-                common = set(h for h in common if outc[h] != 0 or any(fcs[h][c] for c, _ in HORIZONS))
-            for c, label in HORIZONS:
-                for hourset in ("all", "common"):
-                    pts = [p for p in per[c] if hourset == "all" or p[0] in common]
-                    splits = [("period", "all", pts)]
-                    by_y, by_q = defaultdict(list), defaultdict(list)
-                    for p in pts:
-                        by_y[str(p[0].year)].append(p)
-                        by_q[f"Q{(p[0].month - 1) // 3 + 1}"].append(p)
-                    splits += [("year", k, v) for k, v in sorted(by_y.items())] + [("quarter", k, v) for k, v in sorted(by_q.items())]
-                    for split, key, sp in splits:
-                        m = metrics([(f, o, b) for _, f, o, b in sp])
-                        if m:
-                            rows.append({"area": area, "type": short, "horizon": label, "hours_set": hourset,
-                                         "split": split, "split_key": key, **m})
-    os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
+    hours = sorted(set(outc) & set(fcs))
+    per = {c: [] for c, _ in HORIZONS}  # (hour, forecast, outcome, baselines)
+    for h in hours:
+        o = outc[h]
+        for c, _ in HORIZONS:
+            f = fcs[h][c]
+            if f is None or not scored(c, h):
+                continue
+            if short == "solar" and f == 0 and o == 0:
+                continue
+            per[c].append((h, f, o, baselines(outc, c, h)))
+    for c, label in HORIZONS:
+        n_missing = sum(1 for h in hours if fcs[h][c] is None and scored(c, h))
+        missing.append({"area": area, "type": short, "horizon": label, "hours_missing": n_missing})
+    # common hours: all four forecasts and the outcome exist (solar: not all zero)
+    common = set(h for h, *_ in per[HORIZONS[0][0]])
+    for c, _ in HORIZONS[1:]:
+        common &= set(h for h, *_ in per[c])
+    if short == "solar":
+        common = set(h for h in common if outc[h] != 0 or any(fcs[h][c] for c, _ in HORIZONS))
+    for c, label in HORIZONS:
+        for hourset in ("all", "common"):
+            pts = [p for p in per[c] if hourset == "all" or p[0] in common]
+            splits = [("period", "all", pts)]
+            by_y, by_q = defaultdict(list), defaultdict(list)
+            for p in pts:
+                by_y[str(p[0].year)].append(p)
+                by_q[f"Q{(p[0].month - 1) // 3 + 1}"].append(p)
+            splits += [("year", k, v) for k, v in sorted(by_y.items())] + [("quarter", k, v) for k, v in sorted(by_q.items())]
+            for split, key, sp in splits:
+                m = metrics([(f, o, b) for _, f, o, b in sp])
+                if m:
+                    rows.append({"area": area, "type": short, "horizon": label, "hours_set": hourset,
+                                 "split": split, "split_key": key, **m})
+    return rows, missing
+
+
+def write_all(outdir, rows, missing, manifest, title=None, types=None, note=None):
+    os.makedirs(outdir, exist_ok=True)
     head = ["area", "type", "horizon", "hours_set", "split", "split_key"]
     fields = head + sorted({k for r in rows for k in r} - set(head))  # fixed order: no dependence on hash seeds
-    with open(os.path.join(ROOT, "results", "scores.csv"), "w", newline="", encoding="utf-8") as fh:
+    with open(os.path.join(outdir, "scores.csv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)
         w.writeheader()
         w.writerows(rows)
+    doc = {"method": "https://github.com/kvantixtech/energinet-forecasts/blob/main/METHOD.md",
+           "source": "Energinet (www.energidataservice.dk), CC BY 4.0", "downloaded_at_utc": manifest["downloaded_at_utc"],
+           "period": manifest["period"], "missing": missing,
+           "scores": [r for r in rows if r["split"] != "quarter" or r["hours_set"] == "all"]}
+    if note:
+        doc["variant"] = note
+    json.dump(doc, open(os.path.join(outdir, "results.json"), "w"), indent=1, sort_keys=True)
+    write_summary(rows, missing, manifest, outdir, title, types or [t[1] for t in TYPES], note)
+
+
+def main():
+    outcomes, forecasts = load()
     manifest = json.load(open(os.path.join(ROOT, "data", "manifest.json")))
-    json.dump({"method": "https://github.com/kvantixtech/energinet-forecasts/blob/main/METHOD.md",
-               "source": "Energinet (www.energidataservice.dk), CC BY 4.0", "downloaded_at_utc": manifest["downloaded_at_utc"],
-               "period": manifest["period"], "missing": missing,
-               "scores": [r for r in rows if r["split"] != "quarter" or r["hours_set"] == "all"]},
-              open(os.path.join(ROOT, "results", "results.json"), "w"), indent=1, sort_keys=True)
-    write_summary(rows, missing, manifest)
+    rows, missing = [], []
+    for area in AREAS:
+        for tname, short, prefix in TYPES:
+            r, m = score_series(outcomes.get((area, prefix), {}), forecasts.get((area, tname), {}), area, short)
+            rows += r
+            missing += m
+    write_all(os.path.join(ROOT, "results"), rows, missing, manifest)
     print(f"{len(rows)} score rows")
+    for tname, short, prefix, folder, title in VARIANTS:
+        vrows, vmissing = [], []
+        for area in AREAS:
+            r, m = score_series(outcomes.get((area, prefix), {}), forecasts.get((area, tname), {}), area, short)
+            vrows += r
+            vmissing += m
+        note = {"changelog": "CHANGELOG.md 2026-10-05 #7", "title": title,
+                "outcome_columns": [c for c in manifest["settlement_columns"] if c.startswith(prefix)]}
+        write_all(os.path.join(ROOT, "results", folder), vrows, vmissing, manifest, "Results: " + title, [short], note)
+        print(f"{folder}: {len(vrows)} score rows")
 
 
-def write_summary(rows, missing, manifest):
+def write_summary(rows, missing, manifest, outdir, title=None, types=None, note=None):
     p = manifest["period"]
-    out = ["# Results", "", "Generated by `tools/score.py`. Do not edit by hand.", "",
+    out = ["# " + (title or "Results"), "", "Generated by `tools/score.py`. Do not edit by hand.", ""]
+    if note:
+        out += [f"Outcome for offshore wind: {', '.join('`' + c + '`' for c in note['outcome_columns'])} only. "
+                "Forecast, baselines and all other rules as in `METHOD.md` and `CHANGELOG.md`. "
+                "The first scores, against all offshore wind, are in `results/summary.md` and are unchanged.", "",
+                "Not corrected, see CHANGELOG.md #7: Thor is in the outcome from its first power in 2026 but not in the forecast; "
+                "the forecast does not take regulating power into account; new parks can be added to the forecast late.", ""]
+    out += [
            f"Period: {p['first_hour_utc']} to {p['last_hour_utc']} UTC. Data downloaded {manifest['downloaded_at_utc']}. "
            "Source: Energinet (www.energidataservice.dk), CC BY 4.0.", "",
            "Stored forecasts are scored as they are stored today; see METHOD.md, \"What this can't show\".", ""]
     for area in AREAS:
-        for _, short, _ in TYPES:
+        for short in types:
             sub = [r for r in rows if r["area"] == area and r["type"] == short and r["split"] == "period"]
             if not sub:
                 continue
@@ -191,7 +228,7 @@ def write_summary(rows, missing, manifest):
             "Common hours: hours where all four forecasts exist, used to compare horizons.", "",
             "## Missing forecast values", "", "| Area | Type | Horizon | Hours missing |", "|---|---|---|---|"]
     out += [f"| {m['area']} | {m['type']} | {m['horizon']} | {m['hours_missing']:,} |" for m in missing]
-    open(os.path.join(ROOT, "results", "summary.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+    open(os.path.join(outdir, "summary.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
 if __name__ == "__main__":
