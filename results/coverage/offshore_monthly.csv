@@ -1,0 +1,641 @@
+area,outcome,horizon,month,hours,ratio
+DK1,all,day-ahead,2019-11,696,0.8861
+DK1,all,day-ahead,2019-12,744,0.9191
+DK1,all,day-ahead,2020-01,744,0.9009
+DK1,all,day-ahead,2020-02,695,0.9891
+DK1,all,day-ahead,2020-03,697,0.8789
+DK1,all,day-ahead,2020-04,720,0.9146
+DK1,all,day-ahead,2020-05,744,0.9011
+DK1,all,day-ahead,2020-06,720,0.9321
+DK1,all,day-ahead,2020-07,744,0.8511
+DK1,all,day-ahead,2020-08,744,0.9352
+DK1,all,day-ahead,2020-09,720,0.8359
+DK1,all,day-ahead,2020-10,744,0.9243
+DK1,all,day-ahead,2020-11,720,1.0076
+DK1,all,day-ahead,2020-12,744,0.9216
+DK1,all,day-ahead,2021-01,744,0.8547
+DK1,all,day-ahead,2021-02,672,0.8371
+DK1,all,day-ahead,2021-03,744,0.9282
+DK1,all,day-ahead,2021-04,720,0.912
+DK1,all,day-ahead,2021-05,738,0.8952
+DK1,all,day-ahead,2021-06,720,0.8339
+DK1,all,day-ahead,2021-07,744,0.842
+DK1,all,day-ahead,2021-08,744,0.8596
+DK1,all,day-ahead,2021-09,720,0.8904
+DK1,all,day-ahead,2021-10,696,0.9203
+DK1,all,day-ahead,2021-11,696,0.8967
+DK1,all,day-ahead,2021-12,744,0.8458
+DK1,all,day-ahead,2022-01,744,0.8982
+DK1,all,day-ahead,2022-02,672,0.9087
+DK1,all,day-ahead,2022-03,744,0.9486
+DK1,all,day-ahead,2022-04,720,0.9109
+DK1,all,day-ahead,2022-05,744,0.9091
+DK1,all,day-ahead,2022-06,720,0.8531
+DK1,all,day-ahead,2022-07,744,0.8635
+DK1,all,day-ahead,2022-08,744,0.8555
+DK1,all,day-ahead,2022-09,720,0.8509
+DK1,all,day-ahead,2022-10,744,0.9605
+DK1,all,day-ahead,2022-11,696,0.9039
+DK1,all,day-ahead,2022-12,744,0.8966
+DK1,all,day-ahead,2023-01,744,0.9444
+DK1,all,day-ahead,2023-02,672,0.888
+DK1,all,day-ahead,2023-03,744,0.8731
+DK1,all,day-ahead,2023-04,696,0.9084
+DK1,all,day-ahead,2023-05,744,0.9014
+DK1,all,day-ahead,2023-06,720,0.8054
+DK1,all,day-ahead,2023-07,744,0.8731
+DK1,all,day-ahead,2023-08,744,0.9719
+DK1,all,day-ahead,2023-09,720,0.9349
+DK1,all,day-ahead,2023-10,744,0.9157
+DK1,all,day-ahead,2023-11,720,0.8499
+DK1,all,day-ahead,2023-12,744,0.8457
+DK1,all,day-ahead,2024-01,744,0.7793
+DK1,all,day-ahead,2024-02,696,0.7488
+DK1,all,day-ahead,2024-03,744,0.6867
+DK1,all,day-ahead,2024-04,648,0.6698
+DK1,all,day-ahead,2024-05,744,0.7644
+DK1,all,day-ahead,2024-06,720,0.8247
+DK1,all,day-ahead,2024-07,744,0.78
+DK1,all,day-ahead,2024-08,744,0.7638
+DK1,all,day-ahead,2024-09,720,0.7637
+DK1,all,day-ahead,2024-10,744,0.7149
+DK1,all,day-ahead,2024-11,696,0.7102
+DK1,all,day-ahead,2024-12,744,0.6983
+DK1,all,day-ahead,2025-01,744,0.7127
+DK1,all,day-ahead,2025-02,672,0.6884
+DK1,all,day-ahead,2025-03,744,0.6587
+DK1,all,day-ahead,2025-04,696,0.7348
+DK1,all,day-ahead,2025-05,744,0.7396
+DK1,all,day-ahead,2025-06,720,0.7108
+DK1,all,day-ahead,2025-07,744,0.7978
+DK1,all,day-ahead,2025-08,720,0.7309
+DK1,all,day-ahead,2025-09,672,0.7493
+DK1,all,day-ahead,2025-10,744,0.6754
+DK1,all,day-ahead,2025-11,624,0.6604
+DK1,all,day-ahead,2025-12,744,0.6617
+DK1,all,day-ahead,2026-01,744,0.6373
+DK1,all,day-ahead,2026-02,672,0.6597
+DK1,all,day-ahead,2026-03,744,0.6419
+DK1,all,day-ahead,2026-04,720,0.6865
+DK1,all,day-ahead,2026-05,696,0.6171
+DK1,all,day-ahead,2026-06,720,0.5532
+DK1,all,1 hour,2019-11,700,0.9103
+DK1,all,1 hour,2019-12,744,0.9233
+DK1,all,1 hour,2020-01,744,0.9187
+DK1,all,1 hour,2020-02,673,0.9381
+DK1,all,1 hour,2020-03,709,0.8963
+DK1,all,1 hour,2020-04,720,0.9158
+DK1,all,1 hour,2020-05,744,0.9054
+DK1,all,1 hour,2020-06,720,0.9207
+DK1,all,1 hour,2020-07,744,0.8952
+DK1,all,1 hour,2020-08,744,0.9285
+DK1,all,1 hour,2020-09,719,0.8832
+DK1,all,1 hour,2020-10,744,0.9158
+DK1,all,1 hour,2020-11,717,0.9587
+DK1,all,1 hour,2020-12,742,0.9206
+DK1,all,1 hour,2021-01,743,0.91
+DK1,all,1 hour,2021-02,672,0.9034
+DK1,all,1 hour,2021-03,743,0.9138
+DK1,all,1 hour,2021-04,720,0.9068
+DK1,all,1 hour,2021-05,730,0.8968
+DK1,all,1 hour,2021-06,720,0.8904
+DK1,all,1 hour,2021-07,744,0.8789
+DK1,all,1 hour,2021-08,744,0.8938
+DK1,all,1 hour,2021-09,716,0.91
+DK1,all,1 hour,2021-10,707,0.9176
+DK1,all,1 hour,2021-11,709,0.903
+DK1,all,1 hour,2021-12,735,0.8855
+DK1,all,1 hour,2022-01,744,0.9112
+DK1,all,1 hour,2022-02,669,0.9046
+DK1,all,1 hour,2022-03,743,0.9282
+DK1,all,1 hour,2022-04,719,0.8943
+DK1,all,1 hour,2022-05,744,0.9081
+DK1,all,1 hour,2022-06,720,0.8932
+DK1,all,1 hour,2022-07,744,0.8798
+DK1,all,1 hour,2022-08,743,0.9001
+DK1,all,1 hour,2022-09,720,0.8918
+DK1,all,1 hour,2022-10,742,0.9339
+DK1,all,1 hour,2022-11,694,0.9122
+DK1,all,1 hour,2022-12,742,0.9111
+DK1,all,1 hour,2023-01,743,0.9319
+DK1,all,1 hour,2023-02,672,0.9019
+DK1,all,1 hour,2023-03,742,0.9044
+DK1,all,1 hour,2023-04,711,0.9123
+DK1,all,1 hour,2023-05,744,0.9157
+DK1,all,1 hour,2023-06,719,0.884
+DK1,all,1 hour,2023-07,744,0.9166
+DK1,all,1 hour,2023-08,744,0.9459
+DK1,all,1 hour,2023-09,720,0.9209
+DK1,all,1 hour,2023-10,743,0.9269
+DK1,all,1 hour,2023-11,720,0.8899
+DK1,all,1 hour,2023-12,744,0.8376
+DK1,all,1 hour,2024-01,744,0.8239
+DK1,all,1 hour,2024-02,696,0.7946
+DK1,all,1 hour,2024-03,730,0.7349
+DK1,all,1 hour,2024-04,648,0.6988
+DK1,all,1 hour,2024-05,735,0.7272
+DK1,all,1 hour,2024-06,699,0.7367
+DK1,all,1 hour,2024-07,726,0.7044
+DK1,all,1 hour,2024-08,724,0.707
+DK1,all,1 hour,2024-09,720,0.7135
+DK1,all,1 hour,2024-10,743,0.7206
+DK1,all,1 hour,2024-11,713,0.7081
+DK1,all,1 hour,2024-12,744,0.6994
+DK1,all,1 hour,2025-01,736,0.7338
+DK1,all,1 hour,2025-02,672,0.7352
+DK1,all,1 hour,2025-03,742,0.6699
+DK1,all,1 hour,2025-04,695,0.6865
+DK1,all,1 hour,2025-05,744,0.698
+DK1,all,1 hour,2025-06,720,0.6611
+DK1,all,1 hour,2025-07,743,0.7195
+DK1,all,1 hour,2025-08,727,0.6891
+DK1,all,1 hour,2025-09,687,0.7074
+DK1,all,1 hour,2025-10,743,0.6998
+DK1,all,1 hour,2025-11,643,0.7071
+DK1,all,1 hour,2025-12,744,0.7062
+DK1,all,1 hour,2026-01,744,0.6962
+DK1,all,1 hour,2026-02,672,0.6866
+DK1,all,1 hour,2026-03,743,0.6708
+DK1,all,1 hour,2026-04,720,0.6643
+DK1,all,1 hour,2026-05,691,0.5875
+DK1,all,1 hour,2026-06,716,0.5338
+DK1,ge100mw,day-ahead,2019-11,696,0.9357
+DK1,ge100mw,day-ahead,2019-12,744,0.9824
+DK1,ge100mw,day-ahead,2020-01,744,0.9606
+DK1,ge100mw,day-ahead,2020-02,695,1.0569
+DK1,ge100mw,day-ahead,2020-03,697,0.9308
+DK1,ge100mw,day-ahead,2020-04,720,0.9764
+DK1,ge100mw,day-ahead,2020-05,744,0.9594
+DK1,ge100mw,day-ahead,2020-06,720,0.9871
+DK1,ge100mw,day-ahead,2020-07,744,0.9085
+DK1,ge100mw,day-ahead,2020-08,744,0.988
+DK1,ge100mw,day-ahead,2020-09,720,0.8895
+DK1,ge100mw,day-ahead,2020-10,744,0.9784
+DK1,ge100mw,day-ahead,2020-11,720,1.0695
+DK1,ge100mw,day-ahead,2020-12,744,0.9669
+DK1,ge100mw,day-ahead,2021-01,744,1.0195
+DK1,ge100mw,day-ahead,2021-02,672,1.0108
+DK1,ge100mw,day-ahead,2021-03,744,1.1165
+DK1,ge100mw,day-ahead,2021-04,720,1.0916
+DK1,ge100mw,day-ahead,2021-05,738,1.0765
+DK1,ge100mw,day-ahead,2021-06,720,0.9855
+DK1,ge100mw,day-ahead,2021-07,744,1.0049
+DK1,ge100mw,day-ahead,2021-08,744,0.9679
+DK1,ge100mw,day-ahead,2021-09,720,1.0686
+DK1,ge100mw,day-ahead,2021-10,696,1.0907
+DK1,ge100mw,day-ahead,2021-11,696,1.0742
+DK1,ge100mw,day-ahead,2021-12,744,1.0273
+DK1,ge100mw,day-ahead,2022-01,744,1.0756
+DK1,ge100mw,day-ahead,2022-02,672,1.11
+DK1,ge100mw,day-ahead,2022-03,744,1.1286
+DK1,ge100mw,day-ahead,2022-04,720,1.1123
+DK1,ge100mw,day-ahead,2022-05,744,1.0992
+DK1,ge100mw,day-ahead,2022-06,720,1.0124
+DK1,ge100mw,day-ahead,2022-07,744,1.0396
+DK1,ge100mw,day-ahead,2022-08,744,1.0286
+DK1,ge100mw,day-ahead,2022-09,720,1.0357
+DK1,ge100mw,day-ahead,2022-10,744,1.154
+DK1,ge100mw,day-ahead,2022-11,696,1.0865
+DK1,ge100mw,day-ahead,2022-12,744,1.0611
+DK1,ge100mw,day-ahead,2023-01,744,1.1487
+DK1,ge100mw,day-ahead,2023-02,672,1.0784
+DK1,ge100mw,day-ahead,2023-03,744,1.0633
+DK1,ge100mw,day-ahead,2023-04,696,1.1047
+DK1,ge100mw,day-ahead,2023-05,744,1.1139
+DK1,ge100mw,day-ahead,2023-06,720,0.9707
+DK1,ge100mw,day-ahead,2023-07,744,1.0604
+DK1,ge100mw,day-ahead,2023-08,744,1.1733
+DK1,ge100mw,day-ahead,2023-09,720,1.134
+DK1,ge100mw,day-ahead,2023-10,744,1.1235
+DK1,ge100mw,day-ahead,2023-11,720,1.0401
+DK1,ge100mw,day-ahead,2023-12,744,1.0394
+DK1,ge100mw,day-ahead,2024-01,744,0.9457
+DK1,ge100mw,day-ahead,2024-02,696,0.8945
+DK1,ge100mw,day-ahead,2024-03,744,0.8026
+DK1,ge100mw,day-ahead,2024-04,648,0.7797
+DK1,ge100mw,day-ahead,2024-05,744,0.9005
+DK1,ge100mw,day-ahead,2024-06,720,0.9222
+DK1,ge100mw,day-ahead,2024-07,744,0.8962
+DK1,ge100mw,day-ahead,2024-08,744,0.88
+DK1,ge100mw,day-ahead,2024-09,720,0.8921
+DK1,ge100mw,day-ahead,2024-10,744,0.8298
+DK1,ge100mw,day-ahead,2024-11,696,0.8242
+DK1,ge100mw,day-ahead,2024-12,744,0.8143
+DK1,ge100mw,day-ahead,2025-01,744,0.8269
+DK1,ge100mw,day-ahead,2025-02,672,0.8017
+DK1,ge100mw,day-ahead,2025-03,744,0.7539
+DK1,ge100mw,day-ahead,2025-04,696,0.8268
+DK1,ge100mw,day-ahead,2025-05,744,0.8459
+DK1,ge100mw,day-ahead,2025-06,720,0.8096
+DK1,ge100mw,day-ahead,2025-07,744,0.9091
+DK1,ge100mw,day-ahead,2025-08,720,0.7631
+DK1,ge100mw,day-ahead,2025-09,672,0.8483
+DK1,ge100mw,day-ahead,2025-10,744,0.776
+DK1,ge100mw,day-ahead,2025-11,624,0.6942
+DK1,ge100mw,day-ahead,2025-12,744,0.6932
+DK1,ge100mw,day-ahead,2026-01,744,0.6674
+DK1,ge100mw,day-ahead,2026-02,672,0.6891
+DK1,ge100mw,day-ahead,2026-03,744,0.6686
+DK1,ge100mw,day-ahead,2026-04,720,0.7153
+DK1,ge100mw,day-ahead,2026-05,696,0.6362
+DK1,ge100mw,day-ahead,2026-06,720,0.5685
+DK1,ge100mw,1 hour,2019-11,700,0.9616
+DK1,ge100mw,1 hour,2019-12,744,0.987
+DK1,ge100mw,1 hour,2020-01,744,0.9798
+DK1,ge100mw,1 hour,2020-02,673,1.0036
+DK1,ge100mw,1 hour,2020-03,709,0.9495
+DK1,ge100mw,1 hour,2020-04,720,0.9782
+DK1,ge100mw,1 hour,2020-05,744,0.9648
+DK1,ge100mw,1 hour,2020-06,720,0.9772
+DK1,ge100mw,1 hour,2020-07,744,0.9567
+DK1,ge100mw,1 hour,2020-08,744,0.9819
+DK1,ge100mw,1 hour,2020-09,719,0.9405
+DK1,ge100mw,1 hour,2020-10,744,0.9697
+DK1,ge100mw,1 hour,2020-11,717,1.0177
+DK1,ge100mw,1 hour,2020-12,742,0.9665
+DK1,ge100mw,1 hour,2021-01,743,1.0851
+DK1,ge100mw,1 hour,2021-02,672,1.0924
+DK1,ge100mw,1 hour,2021-03,743,1.1006
+DK1,ge100mw,1 hour,2021-04,720,1.0897
+DK1,ge100mw,1 hour,2021-05,730,1.0811
+DK1,ge100mw,1 hour,2021-06,720,1.0561
+DK1,ge100mw,1 hour,2021-07,744,1.0496
+DK1,ge100mw,1 hour,2021-08,744,1.0054
+DK1,ge100mw,1 hour,2021-09,716,1.0926
+DK1,ge100mw,1 hour,2021-10,707,1.0863
+DK1,ge100mw,1 hour,2021-11,709,1.0807
+DK1,ge100mw,1 hour,2021-12,735,1.074
+DK1,ge100mw,1 hour,2022-01,744,1.091
+DK1,ge100mw,1 hour,2022-02,669,1.105
+DK1,ge100mw,1 hour,2022-03,743,1.1043
+DK1,ge100mw,1 hour,2022-04,719,1.0922
+DK1,ge100mw,1 hour,2022-05,744,1.1012
+DK1,ge100mw,1 hour,2022-06,720,1.0607
+DK1,ge100mw,1 hour,2022-07,744,1.0595
+DK1,ge100mw,1 hour,2022-08,743,1.0826
+DK1,ge100mw,1 hour,2022-09,720,1.089
+DK1,ge100mw,1 hour,2022-10,742,1.1219
+DK1,ge100mw,1 hour,2022-11,694,1.0962
+DK1,ge100mw,1 hour,2022-12,742,1.079
+DK1,ge100mw,1 hour,2023-01,743,1.1331
+DK1,ge100mw,1 hour,2023-02,672,1.0959
+DK1,ge100mw,1 hour,2023-03,742,1.1007
+DK1,ge100mw,1 hour,2023-04,711,1.11
+DK1,ge100mw,1 hour,2023-05,744,1.1312
+DK1,ge100mw,1 hour,2023-06,719,1.0639
+DK1,ge100mw,1 hour,2023-07,744,1.1151
+DK1,ge100mw,1 hour,2023-08,744,1.1446
+DK1,ge100mw,1 hour,2023-09,720,1.1201
+DK1,ge100mw,1 hour,2023-10,743,1.1399
+DK1,ge100mw,1 hour,2023-11,720,1.0885
+DK1,ge100mw,1 hour,2023-12,744,1.0339
+DK1,ge100mw,1 hour,2024-01,744,0.9993
+DK1,ge100mw,1 hour,2024-02,696,0.949
+DK1,ge100mw,1 hour,2024-03,730,0.8585
+DK1,ge100mw,1 hour,2024-04,648,0.8133
+DK1,ge100mw,1 hour,2024-05,735,0.8572
+DK1,ge100mw,1 hour,2024-06,699,0.8232
+DK1,ge100mw,1 hour,2024-07,726,0.8094
+DK1,ge100mw,1 hour,2024-08,724,0.8152
+DK1,ge100mw,1 hour,2024-09,720,0.8335
+DK1,ge100mw,1 hour,2024-10,743,0.8358
+DK1,ge100mw,1 hour,2024-11,713,0.821
+DK1,ge100mw,1 hour,2024-12,744,0.8152
+DK1,ge100mw,1 hour,2025-01,736,0.8507
+DK1,ge100mw,1 hour,2025-02,672,0.8556
+DK1,ge100mw,1 hour,2025-03,742,0.7668
+DK1,ge100mw,1 hour,2025-04,695,0.7738
+DK1,ge100mw,1 hour,2025-05,744,0.798
+DK1,ge100mw,1 hour,2025-06,720,0.7559
+DK1,ge100mw,1 hour,2025-07,743,0.8191
+DK1,ge100mw,1 hour,2025-08,727,0.7213
+DK1,ge100mw,1 hour,2025-09,687,0.8011
+DK1,ge100mw,1 hour,2025-10,743,0.8034
+DK1,ge100mw,1 hour,2025-11,643,0.7431
+DK1,ge100mw,1 hour,2025-12,744,0.7398
+DK1,ge100mw,1 hour,2026-01,744,0.7292
+DK1,ge100mw,1 hour,2026-02,672,0.7172
+DK1,ge100mw,1 hour,2026-03,743,0.6988
+DK1,ge100mw,1 hour,2026-04,720,0.6938
+DK1,ge100mw,1 hour,2026-05,691,0.6064
+DK1,ge100mw,1 hour,2026-06,716,0.5488
+DK2,all,day-ahead,2019-11,696,0.8531
+DK2,all,day-ahead,2019-12,744,0.9786
+DK2,all,day-ahead,2020-01,744,0.8479
+DK2,all,day-ahead,2020-02,695,0.7876
+DK2,all,day-ahead,2020-03,697,0.8554
+DK2,all,day-ahead,2020-04,720,0.8176
+DK2,all,day-ahead,2020-05,744,0.8581
+DK2,all,day-ahead,2020-06,720,0.8944
+DK2,all,day-ahead,2020-07,744,0.8684
+DK2,all,day-ahead,2020-08,744,0.8532
+DK2,all,day-ahead,2020-09,720,0.811
+DK2,all,day-ahead,2020-10,744,0.7887
+DK2,all,day-ahead,2020-11,720,0.7999
+DK2,all,day-ahead,2020-12,744,0.913
+DK2,all,day-ahead,2021-01,744,0.8674
+DK2,all,day-ahead,2021-02,672,0.7099
+DK2,all,day-ahead,2021-03,744,0.6079
+DK2,all,day-ahead,2021-04,720,0.4601
+DK2,all,day-ahead,2021-05,738,0.3923
+DK2,all,day-ahead,2021-06,720,0.278
+DK2,all,day-ahead,2021-07,744,0.2817
+DK2,all,day-ahead,2021-08,744,0.2988
+DK2,all,day-ahead,2021-09,720,0.2912
+DK2,all,day-ahead,2021-10,696,0.3119
+DK2,all,day-ahead,2021-11,696,0.2763
+DK2,all,day-ahead,2021-12,744,0.2942
+DK2,all,day-ahead,2022-01,744,0.3298
+DK2,all,day-ahead,2022-02,672,0.3501
+DK2,all,day-ahead,2022-03,744,0.325
+DK2,all,day-ahead,2022-04,720,0.3301
+DK2,all,day-ahead,2022-05,744,0.2896
+DK2,all,day-ahead,2022-06,720,0.3003
+DK2,all,day-ahead,2022-07,744,0.2797
+DK2,all,day-ahead,2022-08,744,0.2869
+DK2,all,day-ahead,2022-09,720,0.2913
+DK2,all,day-ahead,2022-10,744,0.3371
+DK2,all,day-ahead,2022-11,696,0.3324
+DK2,all,day-ahead,2022-12,744,0.3038
+DK2,all,day-ahead,2023-01,744,0.3213
+DK2,all,day-ahead,2023-02,672,0.3284
+DK2,all,day-ahead,2023-03,744,0.8978
+DK2,all,day-ahead,2023-04,696,0.9818
+DK2,all,day-ahead,2023-05,744,0.9909
+DK2,all,day-ahead,2023-06,720,0.8933
+DK2,all,day-ahead,2023-07,744,0.8198
+DK2,all,day-ahead,2023-08,744,1.0666
+DK2,all,day-ahead,2023-09,720,0.9846
+DK2,all,day-ahead,2023-10,744,1.0126
+DK2,all,day-ahead,2023-11,720,0.9941
+DK2,all,day-ahead,2023-12,744,0.8966
+DK2,all,day-ahead,2024-01,744,0.9463
+DK2,all,day-ahead,2024-02,696,0.8927
+DK2,all,day-ahead,2024-03,744,0.8779
+DK2,all,day-ahead,2024-04,648,0.8737
+DK2,all,day-ahead,2024-05,744,0.9735
+DK2,all,day-ahead,2024-06,720,1.0197
+DK2,all,day-ahead,2024-07,744,1.0566
+DK2,all,day-ahead,2024-08,744,1.1752
+DK2,all,day-ahead,2024-09,720,1.0194
+DK2,all,day-ahead,2024-10,744,0.9646
+DK2,all,day-ahead,2024-11,696,1.039
+DK2,all,day-ahead,2024-12,744,1.0253
+DK2,all,day-ahead,2025-01,744,0.9453
+DK2,all,day-ahead,2025-02,672,0.94
+DK2,all,day-ahead,2025-03,744,0.9878
+DK2,all,day-ahead,2025-04,696,1.0173
+DK2,all,day-ahead,2025-05,744,0.9511
+DK2,all,day-ahead,2025-06,720,0.9834
+DK2,all,day-ahead,2025-07,744,1.0623
+DK2,all,day-ahead,2025-08,720,1.1104
+DK2,all,day-ahead,2025-09,672,1.0085
+DK2,all,day-ahead,2025-10,744,0.9377
+DK2,all,day-ahead,2025-11,624,0.8908
+DK2,all,day-ahead,2025-12,744,0.8906
+DK2,all,day-ahead,2026-01,744,0.9281
+DK2,all,day-ahead,2026-02,672,0.9382
+DK2,all,day-ahead,2026-03,744,0.924
+DK2,all,day-ahead,2026-04,720,0.9658
+DK2,all,day-ahead,2026-05,696,0.9605
+DK2,all,day-ahead,2026-06,720,0.9618
+DK2,all,1 hour,2019-11,701,0.8879
+DK2,all,1 hour,2019-12,744,0.9436
+DK2,all,1 hour,2020-01,744,0.8892
+DK2,all,1 hour,2020-02,673,0.8805
+DK2,all,1 hour,2020-03,711,0.8773
+DK2,all,1 hour,2020-04,720,0.8693
+DK2,all,1 hour,2020-05,744,0.8799
+DK2,all,1 hour,2020-06,720,0.8907
+DK2,all,1 hour,2020-07,744,0.8884
+DK2,all,1 hour,2020-08,744,0.9048
+DK2,all,1 hour,2020-09,719,0.8356
+DK2,all,1 hour,2020-10,744,0.8698
+DK2,all,1 hour,2020-11,716,0.8748
+DK2,all,1 hour,2020-12,742,0.8938
+DK2,all,1 hour,2021-01,743,0.8904
+DK2,all,1 hour,2021-02,672,0.7749
+DK2,all,1 hour,2021-03,743,0.6105
+DK2,all,1 hour,2021-04,720,0.4609
+DK2,all,1 hour,2021-05,730,0.3888
+DK2,all,1 hour,2021-06,720,0.3025
+DK2,all,1 hour,2021-07,744,0.3047
+DK2,all,1 hour,2021-08,744,0.3115
+DK2,all,1 hour,2021-09,716,0.2994
+DK2,all,1 hour,2021-10,707,0.3098
+DK2,all,1 hour,2021-11,710,0.297
+DK2,all,1 hour,2021-12,735,0.3286
+DK2,all,1 hour,2022-01,744,0.3334
+DK2,all,1 hour,2022-02,669,0.3465
+DK2,all,1 hour,2022-03,743,0.3185
+DK2,all,1 hour,2022-04,719,0.3277
+DK2,all,1 hour,2022-05,744,0.3146
+DK2,all,1 hour,2022-06,720,0.295
+DK2,all,1 hour,2022-07,744,0.2901
+DK2,all,1 hour,2022-08,743,0.2959
+DK2,all,1 hour,2022-09,720,0.3152
+DK2,all,1 hour,2022-10,742,0.3502
+DK2,all,1 hour,2022-11,694,0.3457
+DK2,all,1 hour,2022-12,742,0.3092
+DK2,all,1 hour,2023-01,743,0.3305
+DK2,all,1 hour,2023-02,672,0.3247
+DK2,all,1 hour,2023-03,741,0.944
+DK2,all,1 hour,2023-04,711,0.9771
+DK2,all,1 hour,2023-05,744,0.9614
+DK2,all,1 hour,2023-06,719,0.933
+DK2,all,1 hour,2023-07,744,0.8957
+DK2,all,1 hour,2023-08,744,0.9657
+DK2,all,1 hour,2023-09,720,0.951
+DK2,all,1 hour,2023-10,743,0.9706
+DK2,all,1 hour,2023-11,720,0.9695
+DK2,all,1 hour,2023-12,744,0.9447
+DK2,all,1 hour,2024-01,744,0.9605
+DK2,all,1 hour,2024-02,696,0.9435
+DK2,all,1 hour,2024-03,730,0.941
+DK2,all,1 hour,2024-04,648,0.9405
+DK2,all,1 hour,2024-05,735,0.9585
+DK2,all,1 hour,2024-06,700,0.971
+DK2,all,1 hour,2024-07,726,0.9712
+DK2,all,1 hour,2024-08,724,0.9851
+DK2,all,1 hour,2024-09,720,0.96
+DK2,all,1 hour,2024-10,743,0.9615
+DK2,all,1 hour,2024-11,713,0.9771
+DK2,all,1 hour,2024-12,744,1.0088
+DK2,all,1 hour,2025-01,736,0.958
+DK2,all,1 hour,2025-02,672,0.9601
+DK2,all,1 hour,2025-03,742,0.9456
+DK2,all,1 hour,2025-04,695,0.9744
+DK2,all,1 hour,2025-05,744,0.9263
+DK2,all,1 hour,2025-06,720,0.9304
+DK2,all,1 hour,2025-07,743,0.9602
+DK2,all,1 hour,2025-08,727,0.9758
+DK2,all,1 hour,2025-09,687,0.9602
+DK2,all,1 hour,2025-10,743,0.9475
+DK2,all,1 hour,2025-11,643,0.9371
+DK2,all,1 hour,2025-12,743,0.9401
+DK2,all,1 hour,2026-01,744,0.9425
+DK2,all,1 hour,2026-02,672,0.9529
+DK2,all,1 hour,2026-03,743,0.9287
+DK2,all,1 hour,2026-04,720,0.9329
+DK2,all,1 hour,2026-05,691,0.956
+DK2,all,1 hour,2026-06,716,0.9531
+DK2,ge100mw,day-ahead,2019-11,696,0.9282
+DK2,ge100mw,day-ahead,2019-12,744,1.0762
+DK2,ge100mw,day-ahead,2020-01,744,0.9252
+DK2,ge100mw,day-ahead,2020-02,695,0.8674
+DK2,ge100mw,day-ahead,2020-03,697,0.9341
+DK2,ge100mw,day-ahead,2020-04,720,0.8995
+DK2,ge100mw,day-ahead,2020-05,744,0.9309
+DK2,ge100mw,day-ahead,2020-06,720,0.956
+DK2,ge100mw,day-ahead,2020-07,744,0.9553
+DK2,ge100mw,day-ahead,2020-08,744,0.8998
+DK2,ge100mw,day-ahead,2020-09,720,0.8791
+DK2,ge100mw,day-ahead,2020-10,744,0.8551
+DK2,ge100mw,day-ahead,2020-11,720,0.872
+DK2,ge100mw,day-ahead,2020-12,744,1.0057
+DK2,ge100mw,day-ahead,2021-01,744,0.9459
+DK2,ge100mw,day-ahead,2021-02,672,0.7673
+DK2,ge100mw,day-ahead,2021-03,744,0.641
+DK2,ge100mw,day-ahead,2021-04,720,0.4806
+DK2,ge100mw,day-ahead,2021-05,738,0.4063
+DK2,ge100mw,day-ahead,2021-06,720,0.2864
+DK2,ge100mw,day-ahead,2021-07,744,0.2896
+DK2,ge100mw,day-ahead,2021-08,744,0.3067
+DK2,ge100mw,day-ahead,2021-09,720,0.2993
+DK2,ge100mw,day-ahead,2021-10,696,0.3216
+DK2,ge100mw,day-ahead,2021-11,696,0.2847
+DK2,ge100mw,day-ahead,2021-12,744,0.3033
+DK2,ge100mw,day-ahead,2022-01,744,0.3408
+DK2,ge100mw,day-ahead,2022-02,672,0.3624
+DK2,ge100mw,day-ahead,2022-03,744,0.3375
+DK2,ge100mw,day-ahead,2022-04,720,0.3385
+DK2,ge100mw,day-ahead,2022-05,744,0.2984
+DK2,ge100mw,day-ahead,2022-06,720,0.3073
+DK2,ge100mw,day-ahead,2022-07,744,0.287
+DK2,ge100mw,day-ahead,2022-08,744,0.2933
+DK2,ge100mw,day-ahead,2022-09,720,0.2995
+DK2,ge100mw,day-ahead,2022-10,744,0.3473
+DK2,ge100mw,day-ahead,2022-11,696,0.3439
+DK2,ge100mw,day-ahead,2022-12,744,0.3133
+DK2,ge100mw,day-ahead,2023-01,744,0.3312
+DK2,ge100mw,day-ahead,2023-02,672,0.3379
+DK2,ge100mw,day-ahead,2023-03,744,0.9238
+DK2,ge100mw,day-ahead,2023-04,696,1.0133
+DK2,ge100mw,day-ahead,2023-05,744,1.0255
+DK2,ge100mw,day-ahead,2023-06,720,0.9143
+DK2,ge100mw,day-ahead,2023-07,744,0.8429
+DK2,ge100mw,day-ahead,2023-08,744,1.0894
+DK2,ge100mw,day-ahead,2023-09,720,1.0139
+DK2,ge100mw,day-ahead,2023-10,744,1.0444
+DK2,ge100mw,day-ahead,2023-11,720,1.0273
+DK2,ge100mw,day-ahead,2023-12,744,0.9228
+DK2,ge100mw,day-ahead,2024-01,744,0.9723
+DK2,ge100mw,day-ahead,2024-02,696,0.916
+DK2,ge100mw,day-ahead,2024-03,744,0.8984
+DK2,ge100mw,day-ahead,2024-04,648,0.8926
+DK2,ge100mw,day-ahead,2024-05,744,0.9957
+DK2,ge100mw,day-ahead,2024-06,720,1.0391
+DK2,ge100mw,day-ahead,2024-07,744,1.0726
+DK2,ge100mw,day-ahead,2024-08,744,1.1952
+DK2,ge100mw,day-ahead,2024-09,720,1.0383
+DK2,ge100mw,day-ahead,2024-10,744,0.9905
+DK2,ge100mw,day-ahead,2024-11,696,1.064
+DK2,ge100mw,day-ahead,2024-12,744,1.0474
+DK2,ge100mw,day-ahead,2025-01,744,0.9682
+DK2,ge100mw,day-ahead,2025-02,672,0.9624
+DK2,ge100mw,day-ahead,2025-03,744,1.011
+DK2,ge100mw,day-ahead,2025-04,696,1.0429
+DK2,ge100mw,day-ahead,2025-05,744,0.972
+DK2,ge100mw,day-ahead,2025-06,720,1.0052
+DK2,ge100mw,day-ahead,2025-07,744,1.0876
+DK2,ge100mw,day-ahead,2025-08,720,1.1308
+DK2,ge100mw,day-ahead,2025-09,672,1.028
+DK2,ge100mw,day-ahead,2025-10,744,0.96
+DK2,ge100mw,day-ahead,2025-11,624,0.9123
+DK2,ge100mw,day-ahead,2025-12,744,0.9131
+DK2,ge100mw,day-ahead,2026-01,744,0.9592
+DK2,ge100mw,day-ahead,2026-02,672,0.9648
+DK2,ge100mw,day-ahead,2026-03,744,0.943
+DK2,ge100mw,day-ahead,2026-04,720,0.9873
+DK2,ge100mw,day-ahead,2026-05,696,0.9823
+DK2,ge100mw,day-ahead,2026-06,720,0.9827
+DK2,ge100mw,1 hour,2019-11,701,0.9719
+DK2,ge100mw,1 hour,2019-12,744,1.0421
+DK2,ge100mw,1 hour,2020-01,744,0.9792
+DK2,ge100mw,1 hour,2020-02,673,0.9701
+DK2,ge100mw,1 hour,2020-03,711,0.9602
+DK2,ge100mw,1 hour,2020-04,720,0.9608
+DK2,ge100mw,1 hour,2020-05,744,0.9557
+DK2,ge100mw,1 hour,2020-06,720,0.9564
+DK2,ge100mw,1 hour,2020-07,744,0.9788
+DK2,ge100mw,1 hour,2020-08,744,0.9566
+DK2,ge100mw,1 hour,2020-09,719,0.9107
+DK2,ge100mw,1 hour,2020-10,744,0.9472
+DK2,ge100mw,1 hour,2020-11,716,0.954
+DK2,ge100mw,1 hour,2020-12,742,0.9862
+DK2,ge100mw,1 hour,2021-01,743,0.9724
+DK2,ge100mw,1 hour,2021-02,672,0.8398
+DK2,ge100mw,1 hour,2021-03,743,0.644
+DK2,ge100mw,1 hour,2021-04,720,0.4823
+DK2,ge100mw,1 hour,2021-05,730,0.4027
+DK2,ge100mw,1 hour,2021-06,720,0.3118
+DK2,ge100mw,1 hour,2021-07,744,0.3137
+DK2,ge100mw,1 hour,2021-08,744,0.3198
+DK2,ge100mw,1 hour,2021-09,716,0.308
+DK2,ge100mw,1 hour,2021-10,707,0.3196
+DK2,ge100mw,1 hour,2021-11,710,0.3062
+DK2,ge100mw,1 hour,2021-12,735,0.339
+DK2,ge100mw,1 hour,2022-01,744,0.3448
+DK2,ge100mw,1 hour,2022-02,669,0.3588
+DK2,ge100mw,1 hour,2022-03,743,0.331
+DK2,ge100mw,1 hour,2022-04,719,0.336
+DK2,ge100mw,1 hour,2022-05,744,0.3245
+DK2,ge100mw,1 hour,2022-06,720,0.3023
+DK2,ge100mw,1 hour,2022-07,744,0.2979
+DK2,ge100mw,1 hour,2022-08,743,0.303
+DK2,ge100mw,1 hour,2022-09,720,0.3242
+DK2,ge100mw,1 hour,2022-10,742,0.3609
+DK2,ge100mw,1 hour,2022-11,694,0.358
+DK2,ge100mw,1 hour,2022-12,742,0.3191
+DK2,ge100mw,1 hour,2023-01,743,0.3408
+DK2,ge100mw,1 hour,2023-02,672,0.334
+DK2,ge100mw,1 hour,2023-03,741,0.9718
+DK2,ge100mw,1 hour,2023-04,711,1.008
+DK2,ge100mw,1 hour,2023-05,744,0.9949
+DK2,ge100mw,1 hour,2023-06,719,0.9554
+DK2,ge100mw,1 hour,2023-07,744,0.9219
+DK2,ge100mw,1 hour,2023-08,744,0.9899
+DK2,ge100mw,1 hour,2023-09,720,0.9803
+DK2,ge100mw,1 hour,2023-10,743,1.003
+DK2,ge100mw,1 hour,2023-11,720,1.0021
+DK2,ge100mw,1 hour,2023-12,744,0.9732
+DK2,ge100mw,1 hour,2024-01,744,0.987
+DK2,ge100mw,1 hour,2024-02,696,0.9682
+DK2,ge100mw,1 hour,2024-03,730,0.9633
+DK2,ge100mw,1 hour,2024-04,648,0.9613
+DK2,ge100mw,1 hour,2024-05,735,0.9807
+DK2,ge100mw,1 hour,2024-06,700,0.9911
+DK2,ge100mw,1 hour,2024-07,726,0.9889
+DK2,ge100mw,1 hour,2024-08,724,1.0061
+DK2,ge100mw,1 hour,2024-09,720,0.9783
+DK2,ge100mw,1 hour,2024-10,743,0.9878
+DK2,ge100mw,1 hour,2024-11,713,1.0015
+DK2,ge100mw,1 hour,2024-12,744,1.0312
+DK2,ge100mw,1 hour,2025-01,736,0.9812
+DK2,ge100mw,1 hour,2025-02,672,0.9832
+DK2,ge100mw,1 hour,2025-03,742,0.9691
+DK2,ge100mw,1 hour,2025-04,695,1.0025
+DK2,ge100mw,1 hour,2025-05,744,0.9491
+DK2,ge100mw,1 hour,2025-06,720,0.9546
+DK2,ge100mw,1 hour,2025-07,743,0.9842
+DK2,ge100mw,1 hour,2025-08,727,0.9967
+DK2,ge100mw,1 hour,2025-09,687,0.9799
+DK2,ge100mw,1 hour,2025-10,743,0.9712
+DK2,ge100mw,1 hour,2025-11,643,0.9596
+DK2,ge100mw,1 hour,2025-12,743,0.9639
+DK2,ge100mw,1 hour,2026-01,744,0.9743
+DK2,ge100mw,1 hour,2026-02,672,0.9804
+DK2,ge100mw,1 hour,2026-03,743,0.9495
+DK2,ge100mw,1 hour,2026-04,720,0.9572
+DK2,ge100mw,1 hour,2026-05,691,0.9798
+DK2,ge100mw,1 hour,2026-06,716,0.9752
